@@ -1,0 +1,47 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/api",
+    "schemes": [
+        "http"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "v1/assignment/:id": {
+            "get": {
+                "summary": "Get Assignment by id",
+                "responses": {
+                    "200": {
+                        "description": "Assignment Object",
+                        "examples": {
+                            "application/json": "{\n   \"duration\": integer,\n   \"tags\": [string]\n   \"_id\": string,\n   \"name\":  string,\n   \"title\": string,\n   \"type\": string,\n   \"date\": date\n}"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Assignment not found"
+                    }
+                },
+                "content": {
+                    "application/json": {}
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "url",
+                        "description": "Specifies the id of assignment",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        }
+    }
+}
