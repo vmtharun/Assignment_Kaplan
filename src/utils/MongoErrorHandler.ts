@@ -42,9 +42,9 @@ export class MongoErrorHandler {
     }
 
     private static formatCastErrorMessage(err: any) {
-        Object.keys(err).forEach(field => {
-            console.log(field + " => " + err[field])
-        });
+        // Object.keys(err).forEach(field => {
+        //     console.log(field + " => " + err[field])
+        // });
 
         return `Field: ${err.path}'s value: ${err.value} is invalid! ${err.value} cann't be casted to ${err.kind}`;
     }

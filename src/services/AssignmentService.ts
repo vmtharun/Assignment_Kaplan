@@ -2,8 +2,7 @@ import { assignmentModel } from '../dbModels/assignmentModel'
 import { notFoundError } from '../utils/ErrorHandler';
 
 export class AssignmentService {
-
-    public static async AddAssignment(req: any) {
+    public static async addAssignment(req: any) {
         let newAssignment = new assignmentModel(req);
         const assignment = await newAssignment.save();
         return `New Assignment Added with id: ${assignment._id}`;

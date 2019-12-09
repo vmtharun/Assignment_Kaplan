@@ -2,7 +2,7 @@ import { AssignmentService } from "../../../services/AssignmentService"
 
 export class AssignmentController {
     public async addAssignment(req: any) {
-        return await AssignmentService.AddAssignment(req);
+        return await AssignmentService.addAssignment(req);
     }
 
     public async getAssignment(id: string) {
