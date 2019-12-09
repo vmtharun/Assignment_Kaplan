@@ -1,4 +1,4 @@
-# Simple Restful API using Node and MongoDB for Add, Get and Search Assignments
+# Simple RESTful API using Node, Express and MongoDB for Add, Get and Search Assignments
 
 To run the app:
     - `docker-compose build` then `docker-compose up`
