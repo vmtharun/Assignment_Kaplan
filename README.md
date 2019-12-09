@@ -3,6 +3,7 @@
 To run the app:
     - `docker-compose build` then `docker-compose up`
 
+To run Tests `docker-compose run --rm app npm test`
 
 Api End points:
    1. http://localhost:3000 : Health Check
