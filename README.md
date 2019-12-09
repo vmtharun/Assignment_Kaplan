@@ -11,12 +11,14 @@ Api End points:
    3. http://localhost:3000/api/v1/assignment : Add new assignment 
       - method `POST`
       - body: 
-      ```{
+      ```
+      {
          "name": "new assignment",
          "title": "new title",
          "type": "Daily",
          "tags": ["C#", ".net"]
-         }```
+      }
+      ```
    4. http://localhost:3000/api/v1/assignment/:id : Get specific Assignment
       - method `GET`
    5. http://localhost:3000/api/v1/assignment/search : Search assignments by tag
