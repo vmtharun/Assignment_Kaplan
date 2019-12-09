@@ -17,21 +17,21 @@ export default [
     ]
   },
   {
-    path: "/assignment/:id",
+    path: "/assignment/search",
     method: "get",
     handler: [
-      async ({ params }: Request, res: Response) => {
-        const result = await assignmentController.getAssignment(params.id);
+      async ({ body }: Request, res: Response) => {
+        const result = await assignmentController.searchAssignmentByTag(body.tags);
         res.status(200).send(result);
       }
     ]
   },
   {
-    path: "/assignment/search",
-    method: "post",
+    path: "/assignment/:id",
+    method: "get",
     handler: [
-      async ({ body }: Request, res: Response) => {
-        const result = await assignmentController.searchAssignmentByTag(body.tags);
+      async ({ params }: Request, res: Response) => {
+        const result = await assignmentController.getAssignment(params.id);
         res.status(200).send(result);
       }
     ]
